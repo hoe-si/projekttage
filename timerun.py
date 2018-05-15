@@ -16,13 +16,13 @@ while True:
 	
 	
 	try:
-		varfile=shelve.open(varpath)
-		money=int(varfile["lowest"])
-		dbmanager.steuer=float(varfile["tax"])
-		sleeptime = int(varfile["sleeptime"])
-		moneygroups = varfile["moneygroups"]
+		#varfile=shelve.open(varpath)
+		money=int(5)
+		dbmanager.steuer=float(0.99)
+		sleeptime = int(60*10)
+		moneygroups = {}
 		print(moneygroups)
-		varfile.close()
+		#varfile.close()
 	
 		shutil.copy(dbmanager.dbpath,sdir+dbmanager.dbpath+str(fnr))
 		shutil.copy(dbmanager.spath,sdir+dbmanager.spath+str(fnr))
